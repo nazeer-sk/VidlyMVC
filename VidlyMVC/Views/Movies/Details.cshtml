@@ -1,0 +1,22 @@
+﻿@model VidlyMVC.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(x => x.Id)</th>
+            <th>@Html.DisplayNameFor(x => x.Name)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Html.DisplayFor(x => x.Id)</td>
+            <td>@Html.DisplayFor(x => x.Name)</td>
+        </tr>
+    </tbody>
+</table>

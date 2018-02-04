@@ -1,0 +1,23 @@
+﻿@model List<VidlyMVC.Models.Customer>
+
+@{
+    ViewBag.Title = "Customers";
+}
+
+<h2>Index</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Customers</div>
+    <div class="panel-body">
+        <ul>
+            @foreach (VidlyMVC.Models.Customer customer in Model)
+            {
+                <li>
+                    @Html.ActionLink(customer.Name, "Details", new { id = customer.Id })
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+

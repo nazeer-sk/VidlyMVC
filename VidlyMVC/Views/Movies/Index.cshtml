@@ -1,0 +1,23 @@
+﻿@model List<VidlyMVC.Models.Movie>
+
+@{
+    ViewBag.Title = "Movies";
+}
+
+<h2>Index</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Movies</div>
+    <div class="panel-body">
+        <ul>
+            @foreach (VidlyMVC.Models.Movie movie in Model)
+            {
+                <li>
+                    @Html.ActionLink(movie.Name, "Details", new { Id = movie.Id })
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+
